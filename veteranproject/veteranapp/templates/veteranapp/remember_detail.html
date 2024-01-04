@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container text-start">
+    <div class="row my-2">
+      <h4>{{ remember.first_name }} {{ remember.last_name }}</h4>
+      <p>Родился - {{ remember.date_of_birth }}</p>
+      <p>Фото (портрет)</p>
+      <p><img src="{{ remember.photo.url }}"
+        alt="coпnect" style="max-height:200px"></p>
+    </div>
+    <div class="row my-2">
+      {{ remember.about }}
+    </div>
+  </div>
+{% endblock %}
